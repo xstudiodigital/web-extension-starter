@@ -1,5 +1,4 @@
 {
-	"extends": "@abhijithvijayan/tsconfig",
 	"compilerOptions": {
 		"target": "es5", // ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017','ES2018' or 'ESNEXT'.
 		"module": "esnext", // Module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', or 'ESNext'.
@@ -8,14 +7,32 @@
 			"dom.iterable",
 			"esnext"
 		],
-		"declaration": false,
-		"isolatedModules": true,
+		"esModuleInterop": true,
+		"downlevelIteration": true,
+		"declaration": true,
+		"forceConsistentCasingInFileNames": true,
+		"moduleResolution": "node",
+		"newLine": "lf",
+		"noEmitOnError": true,
+		"noImplicitAny": true,
+		"noFallthroughCasesInSwitch": true,
+		"noImplicitReturns": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"pretty": true,
+		"resolveJsonModule": true,
+		"sourceMap": true,
+		"strict": true,
+		"jsx": "react",
+		"isolatedModules": false,
 		/* Additional Checks */
 		"useDefineForClassFields": true,
 		"skipLibCheck": true,
+		"allowSyntheticDefaultImports": true
 	},
 	"include": [
 		"src",
-		"webpack.config.js"
+		"webpack.config",
+		"babel.config.js"
 	]
 }
